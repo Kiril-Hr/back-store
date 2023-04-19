@@ -33,6 +33,8 @@ app.use(fileUpload({}));
 
 app.use("/api", router);
 
+app.get("/", (req, res) => res.send("MAIN PAGE"));
+
 //// the last check
 app.use(errorHandler);
 

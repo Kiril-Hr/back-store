@@ -1,6 +1,5 @@
 import { Device, DeviceInfo } from "../models/models.js";
 import { v4 as uuidv4 } from "uuid";
-import fs from "fs";
 import { __dirname, path } from "../utils/path.js";
 import ApiError from "../error/ApiError.js";
 
