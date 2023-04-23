@@ -1,16 +1,5 @@
 import express from "express";
 import sequelize from "./db.js";
-import {
-  Basket,
-  BasketDevice,
-  Brand,
-  Device,
-  DeviceInfo,
-  Rating,
-  Type,
-  TypeBrand,
-  User,
-} from "./models/models.js";
 import cors from "cors";
 import dotenv from "dotenv";
 import router from "./routes/index.js";

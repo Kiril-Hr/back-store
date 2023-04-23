@@ -6,7 +6,7 @@ import ApiError from "../error/ApiError.js";
 class DeviceController {
   async create(req, res, next) {
     try {
-      const { name, price, brandId, typeId, info } = req.body;
+      let { name, price, brandId, typeId, info } = req.body;
       const { img } = req.files;
       let fileName = uuidv4() + ".jpg";
       img.mv(path.resolve(__dirname, "..", "static", fileName));
@@ -32,7 +32,7 @@ class DeviceController {
 
       return res.json(device);
     } catch (err) {
-      next(ApiError.badRequest(e.message));
+      next(ApiError.badRequest(err.message));
     }
   }
   async getOne(req, res) {
